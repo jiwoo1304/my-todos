@@ -2,16 +2,16 @@
 import AddTodoModal from "@/components/addTodoModal";
 import Header from "@/components/header";
 import CheckGreen from "@/components/svg/checkGreen";
-import TodosLogo from "@/components/svg/todosLogo";
+// import TodosLogo from "@/components/svg/todosLogo";
 import TaskModal from "@/components/taskModal";
 import todoIcons from "@/components/todoIcons";
-import { todosFatch } from "@/utils/fatch/todo/todosFatch";
+// import { todosFatch } from "@/utils/fatch/todo/todosFatch";
 import { AddButtonHandle } from "@/utils/handles/AddButtonHandle";
 import { DoneHandle } from "@/utils/handles/DoneHandle";
 import { useState, useEffect } from "react";
 import { BiExpandVertical } from "react-icons/bi";
 import { CgAddR } from "react-icons/cg";
-import { IoIosAddCircleOutline } from "react-icons/io";
+// import { IoIosAddCircleOutline } from "react-icons/io";
 
 export interface ITask {
   id: number;
@@ -60,7 +60,7 @@ const Todos = () => {
 
   // 처음 todo 데이터 가져오기
   useEffect(() => {
-    todosFatch({ setTodos, setTask: setTasks });
+    // todosFatch({ setTodos, setTask: setTasks });
   }, []);
 
   useEffect(() => {
