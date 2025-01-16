@@ -4,18 +4,18 @@ import { UserContext } from "@/utils/userContext";
 import axios from "axios";
 import React, { ChangeEvent, useContext, useEffect, useState } from "react";
 
-export enum Gender {
-  MALE = "male",
-  FEMALE = "female",
-  OTHER = "other",
-}
+// export enum Gender {
+//   MALE = "male",
+//   FEMALE = "female",
+//   OTHER = "other",
+// }
 
 type InputDataType = {
   name: string;
   address: string;
   studentNum: string;
   photoBase64: string;
-  gender: Gender;
+  // gender: Gender;
 };
 
 const UserInfo: React.FC = () => {
@@ -27,7 +27,7 @@ const UserInfo: React.FC = () => {
     address: "",
     studentNum: "",
     photoBase64: "",
-    gender: Gender.MALE,
+    // gender: Gender.MALE,
   });
 
   const handleFileChange = async (event: ChangeEvent<HTMLInputElement>) => {
@@ -76,7 +76,7 @@ const UserInfo: React.FC = () => {
         address: ctx.user.address || "",
         studentNum: ctx.user.studentNum || "",
         photoBase64: ctx.user.photoBase64 || "",
-        gender: ctx.user.gender || Gender.MALE,
+        // gender: ctx.user.gender || Gender.MALE,
       });
       setProfile(ctx.user.photoBase64);
     }
@@ -120,14 +120,14 @@ const UserInfo: React.FC = () => {
               <select
                 className="text-slate-800 w-[20rem]"
                 name="gender"
-                value={inputData.gender}
+                // value={inputData.gender}
                 onChange={handleInputChange}
               >
-                {Object.values(Gender).map((item) => (
-                  <option key={item} value={item}>
-                    {item.charAt(0).toUpperCase() + item.slice(1)}
+                {/* {Object.values(Gender).map((item) => (
+                   <option key={item} value={item}>
+                    // {item.charAt(0).toUpperCase() + item.slice(1)}
                   </option>
-                ))}
+                ))} */}
                 {/* <option key="male" value="male">
                   남자
                 </option>
