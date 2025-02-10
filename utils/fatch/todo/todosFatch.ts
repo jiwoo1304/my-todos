@@ -1,13 +1,13 @@
-// import { ITask } from "@/app/content/todos/page";
+import { ITask } from "@/app/todos/page";
 import axios from "axios";
 import { Dispatch, SetStateAction } from "react";
 
 export const todosFatch = async ({
   setTodos,
-}: // setTask,
-{
+  setTask,
+}: {
   setTodos: Dispatch<SetStateAction<TodoType[]>>;
-  // setTask: Dispatch<SetStateAction<ITask[]>>;
+  setTask: Dispatch<SetStateAction<ITask[]>>;
 }) => {
   const token = localStorage.getItem("qid");
   if (token) {
@@ -32,6 +32,6 @@ export const todosFatch = async ({
       }
     );
 
-    // setTask(responseTasks.data.tasks);
+    setTask(responseTasks.data.tasks);
   }
 };
